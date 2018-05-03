@@ -1,3 +1,30 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+header {
+  background-color: #0085A3;
+  display: flex;
+  justify-content: space-between;
+  height: 113px;
+  align-items: center;
+
+  a,
+  button,
+  img {
+    color: #FBFDFE;
+  }
+
+  img {
+    margin-left: 100px;
+  }
+
+  nav {
+    margin-right: 100px;
+
+    * {
+      /* padding-left: 7px; */
+      margin-left: 13px;
+    }
+  }
+}
