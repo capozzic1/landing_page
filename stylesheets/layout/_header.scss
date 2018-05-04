@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+@import '../abstracts/variables.scss';
+@import '../abstracts/extend.scss';
 
 header {
   background-color: #0085A3;
@@ -8,10 +10,13 @@ header {
   justify-content: space-between;
   height: 113px;
   align-items: center;
+  font-family: nth($text-font-stack, 1);
 
   a,
+  a,
   button,
-  img {
+  img,
+  span {
     color: #FBFDFE;
   }
 
@@ -25,6 +30,12 @@ header {
     * {
       /* padding-left: 7px; */
       margin-left: 13px;
+      font-weight: 600;
     }
+  }
+
+  button {
+    @extend %button;
+    width: 190px;
   }
 }

@@ -415,8 +415,8 @@ html {
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit; }
 
 /**
@@ -425,16 +425,22 @@ html {
 a {
   color: #e50050;
   text-decoration: none; }
-  a:hover, a:active, a:focus {
-    color: #222222;
-    text-decoration: underline; }
 
 /**
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 125%/1.4 "Lato", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  body header {
+    font-size: 16px; }
+  body .choose-plan h1 {
+    font-size: 60px; }
+  body .top-half h1 {
+    color: #343E4D; }
+  body .plan h2 {
+    color: #343E4D; }
+  body .plan p {
+    color: #98A0AB; }
 
 /**
  * Clear inner floats
@@ -477,15 +483,25 @@ body {
   position: absolute;
   width: 1px; }
 
+header button, .plan button {
+  background: #39DA7D;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #EAFBF1; }
+
 header {
   background-color: #0085A3;
   display: flex;
   justify-content: space-between;
   height: 113px;
-  align-items: center; }
+  align-items: center;
+  font-family: "Lato"; }
+  header a,
   header a,
   header button,
-  header img {
+  header img,
+  header span {
     color: #FBFDFE; }
   header img {
     margin-left: 100px; }
@@ -493,65 +509,112 @@ header {
     margin-right: 100px; }
     header nav * {
       /* padding-left: 7px; */
-      margin-left: 13px; }
+      margin-left: 13px;
+      font-weight: 600; }
+  header button {
+    width: 190px; }
 
 .container {
   display: flex;
   flex-direction: column;
   width: 100%; }
 
-.top-half {
+.choose-plan .top-half {
   width: 50%;
   margin: 0 auto;
   text-align: center; }
 
+.choose-plan h1 {
+  margin-top: 102px; }
+
+.choose-plan h2 {
+  margin-top: -30px;
+  color: #343E4D; }
+
+.choose-plan a,
+.choose-plan h2,
+.choose-plan p {
+  color: #8792A0; }
+
+.choose-plan a {
+  position: relative;
+  bottom: 15px;
+  text-decoration: underline; }
+
+header button, .plan button {
+  background: #39DA7D;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #EAFBF1; }
+
 .price-plans {
-  display: flex; }
+  display: flex;
+  position: relative;
+  top: 70px;
+  justify-content: center; }
+  .price-plans .plan-name {
+    position: relative;
+    bottom: 20px; }
 
-.plan .price {
-  display: inline; }
+.plan {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 18px;
+  flex-basis: 21%;
+  border: 2px solid #F8F8F8;
+  padding: 20px 0; }
+  .plan .price {
+    vertical-align: top;
+    font-size: 3em;
+    position: relative;
+    bottom: 18px;
+    padding: 5px; }
+  .plan .price,
+  .plan span {
+    display: inline; }
+  .plan i {
+    color: gold; }
+  .plan .price-container {
+    background: #D1F6E1;
+    display: flex;
+    justify-content: center;
+    height: 130px; }
+    .plan .price-container span {
+      align-self: center; }
+    .plan .price-container h2,
+    .plan .price-container span {
+      color: #3BDA80; }
+  .plan button {
+    width: 80%; }
+  .plan .bottom {
+    margin-top: auto; }
 
-.slider-container {
-  width: 100%;
-  /* Width of the outside container */ }
+.bottom-half {
+  width: 50%;
+  margin: 0 auto; }
 
-/* The slider itself */
 .slider {
   -webkit-appearance: none;
-  /* Override default CSS styles */
   appearance: none;
   width: 100%;
-  /* Full-width */
-  height: 25px;
-  /* Specified height */
-  background: #d3d3d3;
-  /* Grey background */
+  height: 3px;
+  background: #2DBBF2;
   outline: none;
-  /* Remove outline */
-  opacity: 0.7;
-  /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.2s;
-  /* 0.2 seconds transition on hover */
   transition: opacity 0.2s; }
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1;
-  /* Fully shown on mouse-over */ }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
-  width: 25px;
-  /* Set a specific slider handle width */
-  height: 25px;
-  /* Slider handle height */
-  background: #4CAF50;
-  /* Green background */
-  cursor: pointer;
-  /* Cursor on hover */ }
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  background: #2DBBF2;
+  cursor: pointer; }
 
 .slider::-moz-range-thumb {
   width: 25px;

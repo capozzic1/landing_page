@@ -1,9 +1,65 @@
+@import '../abstracts/extend.scss';
+
 .price-plans {
   display: flex;
+  position: relative;
+  top: 70px;
+  justify-content: center;
+
+  .plan-name {
+    position: relative;
+    bottom: 20px;
+  }
 }
 
 .plan {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 18px;
+  flex-basis: 21%;
+  border: 2px solid #F8F8F8;
+  padding: 20px 0;
+
   .price {
+    vertical-align: top;
+    font-size: 3em;
+    position: relative;
+    bottom: 18px;
+    padding: 5px;
+  }
+
+  .price,
+  span {
     display: inline;
+  }
+
+  i {
+    color: gold;
+  }
+
+  .price-container {
+    background: #D1F6E1;
+    display: flex;
+    justify-content: center;
+    height: 130px;
+
+    span {
+      align-self: center;
+    }
+
+    h2,
+    span {
+      color: #3BDA80;
+    }
+  }
+
+  button {
+    @extend %button;
+    width: 80%;
+  }
+
+  .bottom {
+    margin-top: auto;
   }
 }

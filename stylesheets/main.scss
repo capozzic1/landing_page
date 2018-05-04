@@ -1,8 +1,6 @@
-@charset 'UTF-8'; // 1. Configuration and helpers
-@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins'; // 2. Vendors
-@import 'vendor/normalize'; // 3. Base stuff
-@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers'; // 4. Layout-related sections
-@import 'layout/header', 'layout/footer', 'layout/container', 'layout/choose-plan', 'layout/price-plans'; // 5. Components
-@import 'components/button', 'components/slider'; // 6. Page-specific styles
-@import 'pages/home'; // 7. Themes
-@import 'themes/default';
+@charset 'UTF-8';
+@import 'abstracts/variables', 'abstracts/functions'; // 1. Configuration and helpers
+@import 'vendor/normalize'; // 2. Vendors
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers'; // 3. Base stuff
+@import 'layout/header', 'layout/footer', 'layout/container', 'layout/choose-plan', 'layout/price-plans', 'layout/bottom-half'; // 4. Layout-related sections
+@import 'components/button', 'components/slider'; // 5. Components

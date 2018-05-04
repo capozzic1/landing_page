@@ -2,6 +2,31 @@
  * Basic typography style for copy text
  */
 body {
-  color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
+
+  header {
+    font-size: 16px;
+  }
+
+  .choose-plan {
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  .top-half {
+    h1 {
+      color: #343E4D;
+    }
+  }
+
+  .plan {
+    h2 {
+      color: #343E4D;
+    }
+
+    p {
+      color: #98A0AB;
+    }
+  }
 }
